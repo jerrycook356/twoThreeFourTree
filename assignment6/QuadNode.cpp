@@ -5,9 +5,9 @@ template<class ItemType>
 QuadNode<ItemType>::QuadNode(const ItemType& newItem)
 {
 	smallItem = newItem;
-	middleItem = largeItem = NULL;
+	middleItem = largeItem = -1;
 	leftChildPtr = leftMidChildPtr = rightMidChildPtr = rightChildPtr = nullptr;
-
+	
 }
 
 template<class ItemType>
@@ -122,7 +122,7 @@ template<class ItemType>
  template<class ItemType>
  bool QuadNode<ItemType>::isTwoNode()
  {
-	 if ((smallItem != NULL), (middleItem == NULL) && (largeItem == NULL) &&
+	 if ((smallItem != -1), (middleItem == -1) && (largeItem == -1) &&
 		 (leftChildPtr != nullptr) && (rightChildPtr != nullptr) && (leftMidChildPtr == nullptr) &&
 		 (rightMidChildPtr == nullptr))
 	 {
@@ -134,7 +134,7 @@ template<class ItemType>
  template<class ItemType>
  bool QuadNode<ItemType>::isThreeNode()
  {
-	 if((smallItem != NULL)&&(middleItem == NULL)&&(largeItem != NULL)&&(leftChildPtr == nullptr)&&
+	 if((smallItem != -1)&&(middleItem == -1)&&(largeItem != -1)&&(leftChildPtr == nullptr)&&
 		 leftMidChildPtr != nullptr) && (righMidChildPtr == nullptr) && (rightChildPtr != nullptr)
 	 {
 		 return true;
@@ -146,7 +146,7 @@ template<class ItemType>
  template<class ItemType>
  bool QuadNode<ItemType>::isFourNode()
  {
-	 if ((smallItem != NULL) && (middleItem != NULL) && (largeItem != NULL) &&
+	 if ((smallItem != -1) && (middleItem != -1) && (largeItem != -1) &&
 		 (leftChildPtr != nullptr) && (leftMidChildPtr != nullptr) && (rightMidChildPtr != nullptr) &&
 		 (rightChildPtr != nullptr))
 	 {
