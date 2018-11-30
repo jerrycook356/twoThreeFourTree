@@ -123,7 +123,7 @@ template<class ItemType>
  bool QuadNode<ItemType>::isTwoNode()
  {
 	 if ((smallItem != -1), (middleItem == -1) && (largeItem == -1) &&
-		 (leftChildPtr != nullptr) && (rightChildPtr != nullptr) && (leftMidChildPtr == nullptr) &&
+		 (leftChildPtr != nullptr) || (rightChildPtr != nullptr) && (leftMidChildPtr == nullptr) &&
 		 (rightMidChildPtr == nullptr))
 	 {
 		 return true;
